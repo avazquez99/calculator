@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@100&display=swap');
+
+
+* {
+    font-family: 'Fraunces bold', serif;
+}
+
+body {
+    margin: 0;
+    background-color: #004C99;
+}
+
+.container {
+    height: 100vh;
+}
+
+.custom-col {
+    max-width: 75px;
+    flex-basis: 75px;
+}
+
+button {
+    background-color: #00916e;
+    color: #fff;
+    font-size: 24px;
+    border-radius: 32px;
+    margin: 5px;
+    padding: 0;
+    border: none;
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f;
+}
+
+/*Pseudo-class to interact when user press a button*/
+button:active { 
+    background-color: #363636;
+}
+
+.col2 {
+    grid-column: span 2;
+}
+
+.calculator {
+    background-color: #00916e;
+    display: grid;
+    grid-template-rows: 160px repeat(5, 75px);
+    grid-template-columns: repeat(4, 75px);
+    /*This property creates N rows or columns of a fixed value 
+    "repeat" is the quantity of r/c that I want
+    NOTE: This property is always used with display: grid*/
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 15px 15px 0 5px #00000033;
+}
+
+.display {
+    margin: 10px 10px 20px;
+    padding: 16px;
+    grid-column: 1 / -1;
+    /*This means that the element will go since the first to 
+    the last column*/
+    border-radius: 32px;
+    background-color: #363636;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    /*This put a row above the other*/
+    align-items: flex-end;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0 0 0 10px #00000033;
+
+}
+
+#last-value {
+    font-size: 2em;
+}
+
+#current-value {
+    font-size: 1.5em;
+}
